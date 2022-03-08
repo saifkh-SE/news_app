@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/pages/homepage.dart';
+import 'package:news_app/pages/home_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
-
   static final ValueNotifier<ThemeMode> themeNotifier = ValueNotifier(ThemeMode.light);
+
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(primarySwatch: Colors.blue),
           darkTheme: ThemeData.dark(),
           themeMode: currentMode,
-          home: HomePage(),
+          home: const HomePage(),
         );
       },
     );

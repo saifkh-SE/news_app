@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -10,7 +9,9 @@ class ArticlePage extends StatelessWidget {
   final DateTime? publishedAt;
   final String? content;
 
-  const ArticlePage({this.title, this.url, this.urlToImage, this.publishedAt, this.content});
+  const ArticlePage(
+      {Key? key, this.title, this.url, this.urlToImage, this.publishedAt, this.content})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
